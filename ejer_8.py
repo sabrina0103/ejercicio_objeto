@@ -4,6 +4,7 @@ class Celular(Telefono,Camara,ReproductorMp3):
 	def __init__(self,marca,model,color,numero):
 		super().__init__(marca,model,color,numero)
 		self.__bateria = 50
+		self.__credito=0
 
 	def mensajear(self):
 		self.mensaje = input('Ingrese mensaje: ')
@@ -21,6 +22,10 @@ class Celular(Telefono,Camara,ReproductorMp3):
 			print('carga: ',self.__bateria,'%') 
 				
 		print('Carga finalizada!')	
+	def carga_credito(self):
+		self.__credito=+20
+	def ver_credito(self):
+		print('credito',self.__credito)
 
 
 	
